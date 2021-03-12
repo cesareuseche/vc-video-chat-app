@@ -4,6 +4,11 @@
 
 In the project directory, you can run:
 
+### `npm install`
+
+Run `npm install` to install all the dependencies needed for this app
+
+
 ### `npm start`
 
 CD into frontend directory and run `npm start`
