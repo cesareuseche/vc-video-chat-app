@@ -1,11 +1,16 @@
 const express = require('express');
-
-
+const http = require('http')
 const app = express();
+const server = http.createServer(app)
+const socket = require('socket.io')
+const io = socket(server);
 
-const port = process.env.PORT || 8080;
+io.on("connection", socket => {
+    socket.emit("your id", socket.id);
+    socket.on("send message", body => {
+        io.emit("message", body)
+    })
+})
 
-const sever = app.listen(port, () => console.log(`Server started on port ${port}`))
+server.listen(8000, () => console.log("port is running on port 8000"));
 
-app.use('/', express.static('public'))
-app.get("/server", (req, res) => res.send('server its working on port 3000 as well'))

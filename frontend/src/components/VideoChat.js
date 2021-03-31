@@ -1,7 +1,10 @@
 import React from 'react'
 import "../styles/VideoChat.css"
+import openSocket from "socket.io-client"
+
 
 function VideoChat() {
+    const socket = openSocket('http://localhost:8080')
 
     return (
         <div>

@@ -1,6 +1,10 @@
 video{
-  width: 100%;
-    transform: rotateY(180deg);
-    -webkit-transform:rotateY(180deg); /* Safari and Chrome */
-    -moz-transform:rotateY(180deg); /* Firefox */
+  width:100vw;
+  height:100vh;
+  object-fit:cover;
+  z-index:-1;
+  position:absolute;
+  transform: rotateY(180deg);
+  -webkit-transform:rotateY(180deg); /* Safari and Chrome */
+  -moz-transform:rotateY(180deg); /* Firefox */
 }
